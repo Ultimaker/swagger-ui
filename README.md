@@ -11,3 +11,12 @@ This is just the support package to properly format and display the documentatio
 * Modified dist/index.html to match our needs.
 * Created CMake files to build a package
 
+Building the package:
+
+```
+rm -rf build/ dir (if it already exists)
+mkdir build
+cmake -DRELEASE_VERSION="x.y.z" ..
+cpack
+```
+If the `-DRELEASE_VERSION` value is not passed via the command line then a default of `1.0.0` is used instead.
